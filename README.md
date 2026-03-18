@@ -49,9 +49,39 @@ It shows the distance of a random variable from its mean. It is calcualted as
 
 # Program :
 
+```
+Name: ANU NIVITHA U
+Reg no:  212223040016
 
+
+import numpy as np
+n = int(input("Enter the value of n : "))
+print("Value of n =", n)
+InputVal = {}
+for i in range(1, n+1):
+    val = int(input(f"Enter the value no {i} : "))
+    try:
+        InputVal[val] += 1
+    except:
+        InputVal[val] = 1
+print(f"{i} Values Collected Successfully")
+mean = 0
+for key, val in InputVal.items():
+    mean += key*(val/n)
+print(f"Mean = {mean:.3f}")
+ex2 = 0
+for key, val in InputVal.items():
+    ex2 += ((key**2) * val/n)
+var = ex2 - mean**2
+print(f"Variance : {var:.3f}")
+from math import sqrt
+sdtDeviation = sqrt(var)
+print(f"Standard Deviation = {sdtDeviation:.3f}")
+```
 
 # Output : 
+
+<img width="365" height="458" alt="Screenshot 2026-03-18 123552" src="https://github.com/user-attachments/assets/62c62aeb-a01e-4c7d-afa1-c7eb160ff1f8" />
 
 # Results :
 The mean and variance of arrivals of objects from feeder using probability distribution are calculated.
